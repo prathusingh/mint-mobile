@@ -1,6 +1,13 @@
 {
   "name": "mintmobile",
   "version": "0.0.1",
+  "description": "Mint mobile app.",
+  "engines": {
+    "node": "14.x",
+    "npm": "7.x",
+    "yarn": "1.x"
+  },
+  "main": "index.js",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -9,6 +16,12 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prathusingh/mint-mobile"
+  },
+  "homepage": "https://github.com/artsy/eigen#readme",
+  "author": "Prathu Singh",
   "dependencies": {
     "react": "17.0.2",
     "react-native": "0.67.3",
@@ -33,6 +46,13 @@
   },
   "resolutions": {
     "@types/react": "^17"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": false,
+    "trailingComma": "es5",
+    "bracketSpacing": true
   },
   "jest": {
     "preset": "react-native",
