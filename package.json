@@ -21,6 +21,11 @@
     "type": "git",
     "url": "https://github.com/prathusingh/mint-mobile"
   },
+  "keywords": [
+    "mint",
+    "react",
+    "react-native"
+  ],
   "homepage": "https://github.com/artsy/eigen#readme",
   "author": "Prathu Singh",
   "dependencies": {
