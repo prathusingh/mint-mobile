@@ -14,8 +14,9 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "prepare": "husky install"
+    "lint": "eslint -c .eslintrc.js .",
+    "prepare": "husky install",
+    "prettier": "prettier --write"
   },
   "repository": {
     "type": "git",
@@ -57,7 +58,13 @@
     "@types/react": "^17"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn prettier"
+    ],
+    "*.@(json|md)": [
+      "yarn prettier"
+    ]
   },
   "prettier": {
     "printWidth": 100,
