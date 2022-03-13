@@ -15,7 +15,6 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint -c .eslintrc.js .",
-    "prepare": "husky install",
     "prettier": "prettier --write"
   },
   "repository": {
