@@ -15,7 +15,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint -c .eslintrc.js .",
-    "prettier": "prettier --write"
+    "prettier": "prettier --write",
+    "setup:mint": "./scripts/setup-for_mint"
   },
   "repository": {
     "type": "git",
