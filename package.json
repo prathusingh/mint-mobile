@@ -16,7 +16,7 @@
     "test": "jest",
     "lint": "eslint -c .eslintrc.js .",
     "prettier": "prettier --write",
-    "typecheck": "yarn tsc",
+    "type-check": "yarn tsc",
     "setup:mint": "./scripts/setup-for_mint"
   },
   "repository": {
