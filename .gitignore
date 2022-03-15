@@ -63,3 +63,6 @@ buck-out/
 .bundle/
 .ruby-version
 .watchmanconfig
+
+#TypeScript
+tsconfig.tsbuildinfo
