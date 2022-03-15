@@ -16,6 +16,7 @@
     "test": "jest",
     "lint": "eslint -c .eslintrc.js .",
     "prettier": "prettier --write",
+    "typecheck": "yarn tsc",
     "setup:mint": "./scripts/setup-for_mint"
   },
   "repository": {
@@ -44,6 +45,7 @@
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
     "babel-jest": "^26.6.3",
+    "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^7.14.0",
     "husky": "^7.0.4",
     "jest": "^26.6.3",
