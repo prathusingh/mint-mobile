@@ -59,10 +59,10 @@
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
-      "yarn lint",
-      "yarn prettier"
+      "yarn prettier",
+      "yarn lint"
     ],
-    "*.@(json|md)": [
+    "*.@(json|md|js)": [
       "yarn prettier"
     ]
   },
