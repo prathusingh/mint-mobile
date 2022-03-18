@@ -1,0 +1,8 @@
+{
+  "prettier.printWidth": 100,
+  "files.associations": {
+    "*.podspec": "ruby",
+    "Podfile": "ruby",
+    ".h": "objective-c"
+  }
+}
