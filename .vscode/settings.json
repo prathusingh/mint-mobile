@@ -4,5 +4,6 @@
     "*.podspec": "ruby",
     "Podfile": "ruby",
     ".h": "objective-c"
-  }
+  },
+  "java.configuration.updateBuildConfiguration": "interactive"
 }
