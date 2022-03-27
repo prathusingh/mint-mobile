@@ -17,7 +17,7 @@
     "lint": "eslint -c .eslintrc.js .",
     "prettier": "prettier --write",
     "type-check": "yarn tsc",
-    "setup:mint": "./scripts/setup-for_mint"
+    "setup:mint": "./scripts/setup-for-mint"
   },
   "repository": {
     "type": "git",
