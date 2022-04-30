@@ -1,1 +1,3 @@
-export const NavStack = () => {}
+export const NavStack = () => {
+  return <>Navigation</>
+}

@@ -6,7 +6,7 @@ import { GlobalStoreModel } from "./Models/GlobalStoreModel"
 const STORE_VERSION = 0
 
 const asyncStorage = {
-  async getItem(key: String) {
+  async getItem(key: string) {
     try {
       const res = await AsyncStorage.getItem(key)
       if (res) {
