@@ -6,7 +6,7 @@ import {
   perfMiddleware,
   RelayNetworkLayer,
   authMiddleware,
-} from "react-relay-network-modern/node8"
+} from "react-relay-network-modern/node"
 
 const network = new RelayNetworkLayer(
   [
