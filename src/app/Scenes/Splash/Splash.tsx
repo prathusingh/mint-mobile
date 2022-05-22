@@ -1,11 +1,17 @@
 import React from "react"
-import { View } from "react-native"
+import { View, SafeAreaView } from "react-native"
 import SplashIcon from "../../icons/SplashIcon"
 
 export const Splash = () => {
   return (
-    <View>
-      <SplashIcon />
-    </View>
+    <SafeAreaView>
+      <View
+        style={{
+          backgroundColor: "black",
+        }}
+      >
+        <SplashIcon />
+      </View>
+    </SafeAreaView>
   )
 }
