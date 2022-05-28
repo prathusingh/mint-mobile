@@ -20,6 +20,3 @@ export const THEME = {
     white100: "#FFFFFF",
   },
 }
-
-// All available color keys
-export type Color = keyof typeof THEME["colors"]
