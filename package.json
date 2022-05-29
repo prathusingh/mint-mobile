@@ -46,6 +46,7 @@
     "react-native-svg": "^12.3.0",
     "react-native-svg-transformer": "^1.0.0",
     "react-relay": "^13.2.0",
+    "rn-async-storage-flipper": "^0.0.10",
     "styled-components": "^5.3.5",
     "styled-components-react-native": "^1.0.0",
     "yarn": "^1.22.18"
@@ -71,6 +72,7 @@
     "lint-staged": "^12.3.5",
     "metro-react-native-babel-preset": "^0.66.2",
     "prettier": "2.5.1",
+    "react-native-flipper": "^0.146.1",
     "react-relay-network-modern": "^6.2.1",
     "react-test-renderer": "17.0.2",
     "relay-compiler": "^13.2.0",
