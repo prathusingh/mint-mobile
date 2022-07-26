@@ -1,6 +1,6 @@
 import React from "react"
 import { View, SafeAreaView } from "react-native"
-import SplashIcon from "../../icons/SplashIcon"
+import SplashIcon from "../../palette/icons/SplashIcon"
 
 export const Splash = () => {
   return (

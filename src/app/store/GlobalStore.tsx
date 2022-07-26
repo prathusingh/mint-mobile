@@ -1,62 +1,33 @@
 import React from "react"
-import AsyncStorage from "@react-native-async-storage/async-storage"
-import { StoreProvider, createStore, persist, createTypedHooks } from "easy-peasy"
-import { GlobalStoreModel } from "./Models/GlobalStoreModel"
+import { Middleware } from "redux"
+import { StoreProvider, createStore, createTypedHooks } from "easy-peasy"
+import { GlobalStoreModel, getGlobalStoreModel } from "./GlobalStoreModel"
 
-const STORE_VERSION = 0
-
-const asyncStorage = {
-  async getItem(key: string) {
-    try {
-      const res = await AsyncStorage.getItem(key)
-      if (res) {
-        return JSON.parse(res)
-      }
-    } catch (error) {
-      throw error
-    }
-  },
-  async setItem(key: string, data: string) {
-    try {
-      await AsyncStorage.setItem(key, JSON.stringify(data))
-    } catch (error) {
-      throw error
-    }
-  },
-  async removeItem(key: string) {
-    try {
-      await AsyncStorage.removeItem(key)
-    } catch (error) {
-      throw error
-    }
-  },
-}
-
-const createGlobalStore = () => {
-  const store = createStore(
-    persist(GlobalStoreModel, {
-      storage: asyncStorage,
-    }),
-    {
-      name: "GlobalStore",
-      version: STORE_VERSION,
-      devTools: __DEV__,
-    }
-  )
+function createGlobalStore() {
+  const middleware: Middleware[] = []
+  const store = createStore(getGlobalStoreModel(), {
+    middleware,
+  })
   return store
 }
 
-let globalStoreInstance = createGlobalStore()
+let _globalStoreInstance: ReturnType<typeof createGlobalStore> | undefined
+const globalStoreInstance = (): ReturnType<typeof createGlobalStore> => {
+  if (_globalStoreInstance === undefined) {
+    _globalStoreInstance = createGlobalStore()
+  }
+  return _globalStoreInstance
+}
 
-const hooks = createTypedHooks()
+const hooks = createTypedHooks<GlobalStoreModel>()
 
 export const GlobalStore = {
   useAppState: hooks.useStoreState,
   get actions() {
-    return globalStoreInstance.getActions()
+    return globalStoreInstance().getActions()
   },
 }
 
 export const GlobalStoreProvider: React.FC<{}> = ({ children }) => {
-  return <StoreProvider store={globalStoreInstance}>{children}</StoreProvider>
+  return <StoreProvider store={globalStoreInstance()}>{children}</StoreProvider>
 }

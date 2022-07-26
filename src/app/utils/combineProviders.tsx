@@ -1,6 +1,6 @@
 import React from "react"
 
-type ProviderList = Array<React.FC | React.ComponentClass<{ children: React.ReactNode }>>
+type ProviderList = Array<React.FC>
 /**
  * This function can takes a list of Providers and returns
  * one Provider that contains all of them.
@@ -32,7 +32,5 @@ type ProviderList = Array<React.FC | React.ComponentClass<{ children: React.Reac
  * @returns A Provider that includes all the Providers from `list`.
  */
 export const combineProviders = (list: ProviderList, children: React.ReactNode) => {
-  list.reduceRight((accu, Provider) => {
-    ;<Provider>{accu}</Provider>
-  }, <>{children}</>)
+  return list.reduceRight((accu, Provider) => <Provider>{accu}</Provider>, <>{children}</>)
 }
