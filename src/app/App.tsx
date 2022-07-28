@@ -6,12 +6,13 @@ import { GlobalStore } from "./store/GlobalStore"
 const Main: React.FC = () => {
   const isHydrated = GlobalStore.useAppState((state) => state.sessionState.isHydrated)
   const isLoggedIn = GlobalStore.useAppState((state) => state.authModel.userAccessToken)
+  const onboardingState = GlobalStore.useAppState((state) => state.authModel.onboardingState)
 
   if (!isHydrated) {
     return <NavStack />
   }
 
-  if (!isLoggedIn) {
+  if (!isLoggedIn || onboardingState === "incomplete") {
     return <NavStack />
   }
 
