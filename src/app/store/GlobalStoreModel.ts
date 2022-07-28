@@ -1,6 +1,7 @@
 import { Action, State, action } from "easy-peasy"
 import { Versions } from "./migrations"
 import { DevicePrefsModel, getDevicePrefsModel } from "./DevicePrefsModel"
+import { AuthModel, getAuthModel } from "./AuthModel"
 
 interface GlobalStoreStateModel {
   version: number
@@ -8,6 +9,7 @@ interface GlobalStoreStateModel {
     isHydrated: boolean
   }
   devicePrefs: DevicePrefsModel
+  authModel: AuthModel
 }
 
 export interface GlobalStoreModel extends GlobalStoreStateModel {
@@ -30,6 +32,7 @@ export const getGlobalStoreModel = (): GlobalStoreModel => ({
     state.sessionState.isHydrated = true
   }),
   devicePrefs: getDevicePrefsModel(),
+  authModel: getAuthModel(),
 
   // for dev only
   _setVersion: action((state, newVersion) => {
