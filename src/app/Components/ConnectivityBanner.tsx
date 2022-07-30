@@ -19,7 +19,7 @@ const ConnectivityMessage = styled.Text`
 const ConnectivityBanner: React.FC = () => {
   return (
     <Container>
-      <ConnectivityMessage>No Internet Connection</ConnectivityMessage>
+      <ConnectivityMessage>No Internet Connections</ConnectivityMessage>
     </Container>
   )
 }
