@@ -2,6 +2,7 @@ import React from "react"
 import { AppProviders } from "./AppProviders"
 import { NavStack } from "./navigation/NavStack"
 import { GlobalStore } from "./store/GlobalStore"
+import { Onboarding } from "./Scenes/Onboarding/Onboarding"
 
 const Main: React.FC = () => {
   const isHydrated = GlobalStore.useAppState((state) => state.sessionState.isHydrated)
@@ -13,7 +14,7 @@ const Main: React.FC = () => {
   }
 
   if (!isLoggedIn || onboardingState === "incomplete") {
-    return <NavStack />
+    return <Onboarding />
   }
 
   return <NavStack />
