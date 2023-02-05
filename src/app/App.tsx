@@ -20,7 +20,7 @@ const Main: React.FC = () => {
   return <NavStack />
 }
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <AppProviders>
       <Main />

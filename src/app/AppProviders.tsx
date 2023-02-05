@@ -1,14 +1,11 @@
 import React, { ReactNode } from "react"
 import { combineProviders } from "./utils/combineProviders"
-import { LogBox } from "react-native"
 import { SafeAreaProvider } from "react-native-safe-area-context"
 import { RelayEnvironmentProvider } from "react-relay"
 import { defaultEnvironment } from "./relay/createEnvironment"
 import { Theme } from "./palette/themes"
 import { GlobalStoreProvider, GlobalStore } from "./store/GlobalStore"
 import { ProvideScreenDimensions } from "./shared/hooks/useScreenDimensions"
-
-LogBox.ignoreLogs(["Expected style "])
 
 export const AppProviders = ({ children }: { children: ReactNode }) =>
   combineProviders(

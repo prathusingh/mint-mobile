@@ -9,7 +9,7 @@ export type SafeAreaInsets = EdgeInsets
 export interface ScreenDimensions {
   width: number
   height: number
-  orientation: ScreenOrientation
+  orientation: "landscape | portrait"
   size: "small" | "standard" | "large"
   isSmallScreen: boolean
 }
